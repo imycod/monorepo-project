@@ -1,3 +1,11 @@
+/*
+ * @Author: wuxs 317009160@qq.com
+ * @Date: 2025-10-06 18:45:49
+ * @LastEditors: wuxs 317009160@qq.com
+ * @LastEditTime: 2025-10-06 21:44:56
+ * @FilePath: \monorepo-project\readme.txt
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 1. 告诉pnpm子包位置 （哪些是需要管理的）
 
 2. pnpm --workspace-root [...] or pnpm -w (根工程执行命令)
