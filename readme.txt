@@ -100,3 +100,29 @@ pnpm lint:prettier && pnpm lint:eslint && pnpm lint:spellcheck && node ./scripts
 pnpm -Dw add lint-staged
 
 ```
+
+path -> /monorepo-project/.lintstagedrc.js
+
+```js
+// "node ./scripts/xxx.js" 如果有脚本需要处理可写
+export default {
+  '*.{js,ts,mjs,cjs,json,tsx,jsx,css,less,scss,vue,html,md}': ['cspell lint'],
+  '*.{js,ts,vue,md}': ['prettier --write', 'eslint', 'node ./scripts/xxx.js']
+};
+```
+
+.husky
+pre-commit
+
+1. git commit .
+2. pnpm commit
+   2.1 -> precommit
+
+windows可能不支持，需要换另外的校验写法
+
+```
+#!/usr/bin/env sh
+
+# pnpm lint:prettier && pnpm lint:eslint && pnpm lint:spellcheck
+# pnpm precommit
+```

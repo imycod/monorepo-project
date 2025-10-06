@@ -1,3 +1,8 @@
-#!/usr/bin/env sh
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
 
-pnpm lint:prettier && pnpm lint:eslint && pnpm lint:spellcheck
+[ -n "$CI" ] && exit 0
+
+PATH="/usr/local/bin:$PATH"
+
+pnpm exec lint-staged
