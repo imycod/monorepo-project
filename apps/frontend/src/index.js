@@ -1,1 +1,2 @@
-let duyi = "xxx"
+let duyi = 'xxx';
+console.log(duyi);

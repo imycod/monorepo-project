@@ -71,7 +71,32 @@ pnpm -Dw add cspell @cspell/dict-lorem-ipsum
 
 .gitignore 的配置
 
+1. commitizen
+
 ```cmd
 pnpm -Dw add @commitlint/cli @commitlint/config-conventional commitizen cz-git
+
+```
+
+2. husky
+
+```cmd
+pnpm -Dw add husky
+
+pnpx husky init
+```
+
+可以自定义些脚本
+
+```pre-commit
+#!/usr/bin/env sh
+
+pnpm lint:prettier && pnpm lint:eslint && pnpm lint:spellcheck && node ./scripts/xxx.js
+```
+
+3. lint-staged
+
+```cmd
+pnpm -Dw add lint-staged
 
 ```
